@@ -413,6 +413,21 @@ function showSkillsModal() {
         '</div>';
     openHTMLModal('Technical Skills & Toolsets', html);
 }
+function showStrengthsModal() {
+    var html = '<div style="padding: 10px; text-align: left; max-height: 450px; overflow-y: auto;">' +
+               '<ul style="line-height: 1.6; padding-left: 20px; margin: 0;">' +
+               '<li style="margin-bottom: 12px;"><strong>9+ Years of Teaching Experience:</strong> Extensive post-M.Tech tenure delivering core Electrical and Electronics Engineering courses.</li>' +
+               '<li style="margin-bottom: 12px;"><strong>Outcome-Based Education (OBE):</strong> Comprehensive understanding of OBE frameworks, metrics, and modern Teaching-Learning processes.</li>' +
+               '<li style="margin-bottom: 12px;"><strong>Accreditation & Operations Management:</strong> Proven track record of managing department accreditation file compilation (NBA & NAAC) and coordinating internal examination branch workloads.</li>' +
+               '<li style="margin-bottom: 12px;"><strong>Regional Educational Exposure:</strong> Insightful adaptability gained from serving higher education institutional models across multiple geometric territories.</li>' +
+               '<li style="margin-bottom: 12px;"><strong>Pedagogical Methodologies:</strong> Gifted at synthesizing distinct technical instructional delivery strategies to motivate, guide, and optimize student success metrics.</li>' +
+               '<li style="margin-bottom: 12px;"><strong>Operational Autonomy:</strong> High capability to engineer and execute academic workflows with minimal supervision, strong organizational planning, and an agile growth mindset.</li>' +
+               '<li style="margin-bottom: 12px;"><strong>Core Competencies:</strong> Exceptional written and verbal communication bandwidth, high grasping power, strict punctuality, and definitive operational confidence.</li>' +
+               '</ul>' +
+               '</div>';
+               
+    openHTMLModal('Academic Strengths & Professional Traits', html);
+}
 
 function showConferencesModal() {
     var html = '<div style="padding:10px; text-align:left; max-height:450px; overflow-y:auto;">' +
