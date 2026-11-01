@@ -71,6 +71,7 @@ function handleExploreClick(sectionKey) {
     else if (sectionKey === 'expertise') showExpertiseModal();
     else if (sectionKey === 'skills') showSkillsModal();
     else if (sectionKey === 'conferences') showConferencesModal();
+    else if (sectionKey === 'strengths') showStrengthsModal();
 }
 
 // ==========================================
