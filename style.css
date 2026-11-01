@@ -235,6 +235,26 @@ body {
     margin-bottom: 8px;
     color: #2d3748;
 }
+/* Hides the list by default */
+.strengths-list.hidden {
+    display: none;
+}
+
+/* Optional styling to make your explore button look nice */
+.explore-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.explore-btn:hover {
+    background-color: #0056b3;
+}
 
 /* ==========================================================================
    5. UNIFIED POPUP MODAL ARCHITECTURE
