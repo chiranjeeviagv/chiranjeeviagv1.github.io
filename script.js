@@ -57,52 +57,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Default initialization
     switchView('academic');
 });
+
 // ==========================================
 // 4. ROUTER SWITCH ROUTINE
 // ==========================================
 function handleExploreClick(sectionKey) {
-    // 1. Direct handling for the inline dropdown expanding panel
-    if (sectionKey === 'academic-strengths-list') {
-        toggleInlineSection(sectionKey);
-        return; 
-    }
-
-    // 2. Handling for all your standard popup modal windows
-    var btnAcademic = document.getElementById('btn-academic');
-    var currentView = (btnAcademic && btnAcademic.classList.contains('active')) ? 'academic' : 'industry';
-
     if (sectionKey === 'qualifications') showQualificationsModal();
     else if (sectionKey === 'certifications') showCertificationsModal();
     else if (sectionKey === 'experience') showExperienceModal();
     else if (sectionKey === 'publications') showPublicationsModal();
     else if (sectionKey === 'fdps') showDevelopmentProgramsModal();
+    else if (sectionKey === 'references') showReferencesModal();
     else if (sectionKey === 'expertise') showExpertiseModal();
     else if (sectionKey === 'skills') showSkillsModal();
     else if (sectionKey === 'conferences') showConferencesModal();
-    else if (sectionKey === 'references') showReferencesModal(currentView);
 }
 
 // ==========================================
-// 5. WINDOW FRAME & INLINE DYNAMICS
+// 5. WINDOW FRAME DYNAMICS
 // ==========================================
-function toggleInlineSection(targetSectionId) {
-    var targetEl = document.getElementById(targetSectionId);
-    if (targetEl) {
-        // Toggle the visibility class from your style.css
-        targetEl.classList.toggle('hidden');
-        
-        // Find the specific button that was clicked to change its text dynamically
-        var activeBtn = document.querySelector('.explore-btn[data-section="' + targetSectionId + '"]');
-        if (activeBtn) {
-            if (targetEl.classList.contains('hidden')) {
-                activeBtn.textContent = 'Explore More';
-            } else {
-                activeBtn.textContent = 'Show Less';
-            }
-        }
-    }
-}
-
 function openHTMLModal(title, htmlContent) {
     var modal = document.getElementById('details-modal');
     var modalTitle = document.getElementById('modal-title');
@@ -127,7 +100,6 @@ function closeModal() {
         document.body.style.overflow = '';
     }
 }
-
 // ==========================================
 // 6. DYNAMIC CONTEXTUAL REFERENCE ENGINE
 // ==========================================
@@ -439,21 +411,6 @@ function showSkillsModal() {
         '<p><strong>Domain Tools:</strong> FACTS Controllers Optimization, Smart Grid Architecture Twins, Cybersecurity Infrastructure Auditing.</p>' +
         '</div>';
     openHTMLModal('Technical Skills & Toolsets', html);
-}
-function showStrengthsModal() {
-    var html = '<div style="padding: 10px; text-align: left; max-height: 450px; overflow-y: auto;">' +
-               '<ul style="line-height: 1.6; padding-left: 20px; margin: 0;">' +
-               '<li style="margin-bottom: 12px;"><strong>9+ Years of Teaching Experience:</strong> Extensive post-M.Tech tenure delivering core Electrical and Electronics Engineering courses.</li>' +
-               '<li style="margin-bottom: 12px;"><strong>Outcome-Based Education (OBE):</strong> Comprehensive understanding of OBE frameworks, metrics, and modern Teaching-Learning processes.</li>' +
-               '<li style="margin-bottom: 12px;"><strong>Accreditation & Operations Management:</strong> Proven track record of managing department accreditation file compilation (NBA & NAAC) and coordinating internal examination branch workloads.</li>' +
-               '<li style="margin-bottom: 12px;"><strong>Regional Educational Exposure:</strong> Insightful adaptability gained from serving higher education institutional models across multiple geometric territories.</li>' +
-               '<li style="margin-bottom: 12px;"><strong>Pedagogical Methodologies:</strong> Gifted at synthesizing distinct technical instructional delivery strategies to motivate, guide, and optimize student success metrics.</li>' +
-               '<li style="margin-bottom: 12px;"><strong>Operational Autonomy:</strong> High capability to engineer and execute academic workflows with minimal supervision, strong organizational planning, and an agile growth mindset.</li>' +
-               '<li style="margin-bottom: 12px;"><strong>Core Competencies:</strong> Exceptional written and verbal communication bandwidth, high grasping power, strict punctuality, and definitive operational confidence.</li>' +
-               '</ul>' +
-               '</div>';
-               
-    openHTMLModal('Academic Strengths & Professional Traits', html);
 }
 
 function showConferencesModal() {
