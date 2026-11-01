@@ -153,9 +153,9 @@ function showQualificationsModal() {
              '<p><strong>SSC Certification:</strong> ZP High School, Jami - 89.86% ' +
              '[<a href="https://drive.google.com/file/d/12HNfZv_ltMW8Lw_KnB7q5gLGwAwHcxQU/view?usp=sharing" target="_blank" style="color: #0066cc; text-decoration: underline;">Verify Credential</a>]</p>' +
              '</div>';
-
   openHTMLModal("Qualifications Records", html);
-}
+       }
+function acedemic-StrengthsModal() {
 <ul id="academic-strengths-list" class="strengths-list hidden">
         <li><strong>9+ Years of Teaching Experience:</strong> Extensive post-M.Tech tenure delivering core Electrical and Electronics Engineering courses.</li>
         <li><strong>Outcome-Based Education (OBE):</strong> Comprehensive understanding of OBE frameworks, metrics, and modern Teaching-Learning processes.</li>
