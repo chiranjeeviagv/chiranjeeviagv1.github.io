@@ -155,7 +155,7 @@ function showQualificationsModal() {
              '</div>';
   openHTMLModal("Qualifications Records", html);
        }
-function acedemic-StrengthsModal() {
+function acedemicStrengthsModal() {
 <ul id="academic-strengths-list" class="strengths-list hidden">
         <li><strong>9+ Years of Teaching Experience:</strong> Extensive post-M.Tech tenure delivering core Electrical and Electronics Engineering courses.</li>
         <li><strong>Outcome-Based Education (OBE):</strong> Comprehensive understanding of OBE frameworks, metrics, and modern Teaching-Learning processes.</li>
