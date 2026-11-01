@@ -57,26 +57,52 @@ document.addEventListener('DOMContentLoaded', function() {
     // Default initialization
     switchView('academic');
 });
-
 // ==========================================
 // 4. ROUTER SWITCH ROUTINE
 // ==========================================
 function handleExploreClick(sectionKey) {
+    // 1. Direct handling for the inline dropdown expanding panel
+    if (sectionKey === 'academic-strengths-list') {
+        toggleInlineSection(sectionKey);
+        return; 
+    }
+
+    // 2. Handling for all your standard popup modal windows
+    var btnAcademic = document.getElementById('btn-academic');
+    var currentView = (btnAcademic && btnAcademic.classList.contains('active')) ? 'academic' : 'industry';
+
     if (sectionKey === 'qualifications') showQualificationsModal();
     else if (sectionKey === 'certifications') showCertificationsModal();
     else if (sectionKey === 'experience') showExperienceModal();
     else if (sectionKey === 'publications') showPublicationsModal();
     else if (sectionKey === 'fdps') showDevelopmentProgramsModal();
-    else if (sectionKey === 'references') showReferencesModal();
     else if (sectionKey === 'expertise') showExpertiseModal();
     else if (sectionKey === 'skills') showSkillsModal();
     else if (sectionKey === 'conferences') showConferencesModal();
-    else if (sectionKey === 'strengths') showStrengthsModal();
+    else if (sectionKey === 'references') showReferencesModal(currentView);
 }
 
 // ==========================================
-// 5. WINDOW FRAME DYNAMICS
+// 5. WINDOW FRAME & INLINE DYNAMICS
 // ==========================================
+function toggleInlineSection(targetSectionId) {
+    var targetEl = document.getElementById(targetSectionId);
+    if (targetEl) {
+        // Toggle the visibility class from your style.css
+        targetEl.classList.toggle('hidden');
+        
+        // Find the specific button that was clicked to change its text dynamically
+        var activeBtn = document.querySelector('.explore-btn[data-section="' + targetSectionId + '"]');
+        if (activeBtn) {
+            if (targetEl.classList.contains('hidden')) {
+                activeBtn.textContent = 'Explore More';
+            } else {
+                activeBtn.textContent = 'Show Less';
+            }
+        }
+    }
+}
+
 function openHTMLModal(title, htmlContent) {
     var modal = document.getElementById('details-modal');
     var modalTitle = document.getElementById('modal-title');
@@ -101,6 +127,7 @@ function closeModal() {
         document.body.style.overflow = '';
     }
 }
+
 // ==========================================
 // 6. DYNAMIC CONTEXTUAL REFERENCE ENGINE
 // ==========================================
