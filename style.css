@@ -202,13 +202,11 @@ body {
 .cv-grid-container p {
     color: #4a5568;
     font-size: 0.95rem;
+    margin-bottom: 15px; /* Added spacing above the button */
 }
 
-.action-buttons {
-    margin-top: 20px;
-}
-
-.explore-btn, .strengths-toggle-btn {
+/* Unified Explore Button Design System */
+.explore-btn {
     padding: 8px 18px;
     font-size: 0.88rem;
     color: #007bff;
@@ -218,42 +216,12 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: all 0.2s ease;
-}
-
-.explore-btn:hover, .strengths-toggle-btn:hover {
-    background: #007bff;
-    color: white;
-}
-
-.strengths-list {
-    padding-left: 20px;
-    margin-top: 15px;
-}
-
-.strengths-list li {
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-    color: #2d3748;
-}
-/* Hides the list by default */
-.strengths-list.hidden {
-    display: none;
-}
-
-/* Optional styling to make your explore button look nice */
-.explore-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    display: inline-block;
 }
 
 .explore-btn:hover {
-    background-color: #0056b3;
+    background: #007bff;
+    color: white;
 }
 
 /* ==========================================================================
